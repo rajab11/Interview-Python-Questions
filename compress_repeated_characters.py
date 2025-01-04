@@ -13,35 +13,21 @@ Input: aabbbcccc
 
 Output: a [2] b[3]c[4] 
 
-Explanation: Two 'a's become 'a[2]', 
-
-three 'b's become 'b[3]', four 'c's 
-
-become 'c[4]' 
+Explanation: Two 'a's become 'a[2]', three 'b's become 'b[3]', four 'c's become 'c[4]' 
 
 EXAMPLE 2 
-
 Input: abc123!!! 
-
 Output: abc123! [3] 
-
- 
 
 Explanation: Single occurrences remain unchanged, three exclamation marks become '![3]' 
 
 Requirements 
 
 1.Implement a function that takes a string as input and returns the compressed string 
-
 2.Preserve the order of characters in the input string 
-
 3.Case sensitivity must be maintained 
-
 4.Handle any printable character including numbers and special characters 
-
 5.Don't add count for non-repeated characters 
-
 6.Empty strings should return empty strings 
-
 7.The compression format should be character followed by count in square brackets 
 """
