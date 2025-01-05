@@ -31,3 +31,28 @@ Requirements
 6.Empty strings should return empty strings 
 7.The compression format should be character followed by count in square brackets 
 """
+def compress_repeated_characters(my_list):
+    
+    output=''
+    count=1
+
+    for i in range(1,len(my_list)):
+        if my_list[i]==my_list[i-1]:
+            count+=1
+        else:
+            if count==1:
+                output+=f"{my_list[i-1]}"
+            else:
+                output+=f"{my_list[i-1]}{count}"
+            count=1
+    
+    output+=f"{my_list[-1]}{count}"
+    
+    return output
+
+
+input="aabbbcccc"
+print(compress_repeated_characters(input))
+
+input="abc123!!!"
+print(compress_repeated_characters(input))
